@@ -82,7 +82,8 @@
         <header-file src="src/ios/CordovaAdalUtils.h" />
         <source-file src="src/ios/CordovaAdalUtils.m" />
 
-        <framework src="src/ios/ADAL.framework" custom="true"/>
+        <!--<framework src="src/ios/ADAL.framework" custom="true"/>-->
+        <framework src="ADAL" type="podspec" spec="~> 2.6.4" />
 
         <resource-file src="src/ios/ADALiOS.entitlements" />
         <hook type="after_plugin_install" src="scripts/configureEntitlementsIos.js" />
