@@ -4,10 +4,11 @@
  * See License in the project root for license information.
  ******************************************************************************/
 
-#import "CordovaAdalPlugin.h"
-#import "CordovaAdalUtils.h"
 
 #import <ADAL/ADAL.h>
+
+#import "CordovaAdalPlugin.h"
+#import "CordovaAdalUtils.h"
 
 @implementation CordovaAdalPlugin
 

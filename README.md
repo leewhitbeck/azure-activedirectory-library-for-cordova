@@ -1,3 +1,13 @@
+# Test for latest version of ADAL for Objc plugin
+
+Steps:
+
+1. `cordova plugin add` this repo URL
+2. `cordova platform add ios`
+3. Edit `platforms/ios/Podfile` and set `platform :ios, '10.0'`
+4. `cd platforms/ios` run `pod install`
+
+
 # Active Directory Authentication Library (ADAL) plugin for Apache Cordova apps
 
 [![Build status](https://ci.appveyor.com/api/projects/status/hslf0dq6i33p320v/branch/master?svg=true)](https://ci.appveyor.com/project/adal-for-cordova-bot/azure-activedirectory-library-for-cordova/branch/master)
