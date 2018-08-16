@@ -390,7 +390,7 @@ typedef enum
                   promptBehavior:(ADPromptBehavior)promptBehavior
                   userIdentifier:(ADUserIdentifier*)userId
             extraQueryParameters:(NSString*)queryParams
-            claimParams:(NSString*)claimParams
+            claimParam:(NSString*)claimParam
                  completionBlock:(ADAuthenticationCallback)completionBlock;
 
 /*! Follows the OAuth2 protocol (RFC 6749). The function will first look at the cache and automatically check for token
