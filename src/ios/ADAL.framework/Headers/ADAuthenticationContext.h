@@ -340,6 +340,7 @@ typedef enum
  @param userId: The user to be prepopulated in the credentials form. Additionally, if token is found in the cache,
  it may not be used if it belongs to different token. This parameter can be nil.
  @param extraQueryParameters: will be appended to the HTTP request to the authorization endpoint. This parameter can be nil.
+ @param claimParam: will be appended to the HTTP request to the authorization endpoint. This parameter can be nil.
  @param completionBlock: the block to execute upon completion. You can use embedded block, e.g. "^(ADAuthenticationResult res){ <your logic here> }"
  */
 - (void)acquireTokenWithResource:(NSString*)resource
@@ -347,6 +348,7 @@ typedef enum
                      redirectUri:(NSURL*)redirectUri
                           userId:(NSString*)userId
             extraQueryParameters:(NSString*)queryParams
+            claimParam:(NSString*)claimParam
                  completionBlock:(ADAuthenticationCallback)completionBlock;
 
 /*! Follows the OAuth2 protocol (RFC 6749). The behavior is controlled by the promptBehavior parameter on whether to re-authorize the
@@ -357,6 +359,7 @@ typedef enum
  @param userId: The user to be prepopulated in the credentials form. Additionally, if token is found in the cache,
  it may not be used if it belongs to different token. This parameter can be nil.
  @param extraQueryParameters: will be appended to the HTTP request to the authorization endpoint. This parameter can be nil.
+ @param claimParam: will be appended to the HTTP request to the authorization endpoint. This parameter can be nil.
  @param credentialsType: controls the way of obtaining client credentials if such are needed.
  @param promptBehavior: controls if any credentials UI will be shownt.
  @param completionBlock: the block to execute upon completion. You can use embedded block, e.g. "^(ADAuthenticationResult res){ <your logic here> }"
@@ -367,6 +370,7 @@ typedef enum
                   promptBehavior:(ADPromptBehavior)promptBehavior
                           userId:(NSString*)userId
             extraQueryParameters:(NSString*)queryParams
+            claimParam:(NSString*)claimParam
                  completionBlock:(ADAuthenticationCallback)completionBlock;
 
 /*! Follows the OAuth2 protocol (RFC 6749). The behavior is controlled by the promptBehavior parameter on whether to re-authorize the
@@ -377,6 +381,7 @@ typedef enum
  @param promptBehavior controls if any credentials UI will be shown.
  @param userId An ADUserIdentifier object describing the user being authenticated
  @param extraQueryParameters will be appended to the HTTP request to the authorization endpoint. This parameter can be nil.
+ @param claimParam: will be appended to the HTTP request to the authorization endpoint. This parameter can be nil.
  @param completionBlock the block to execute upon completion. You can use embedded block, e.g. "^(ADAuthenticationResult res){ <your logic here> }"
  */
 - (void)acquireTokenWithResource:(NSString*)resource
@@ -385,6 +390,7 @@ typedef enum
                   promptBehavior:(ADPromptBehavior)promptBehavior
                   userIdentifier:(ADUserIdentifier*)userId
             extraQueryParameters:(NSString*)queryParams
+            claimParams:(NSString*)claimParams
                  completionBlock:(ADAuthenticationCallback)completionBlock;
 
 /*! Follows the OAuth2 protocol (RFC 6749). The function will first look at the cache and automatically check for token

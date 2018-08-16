@@ -121,10 +121,13 @@ declare namespace Microsoft {
             * @param   {String}  extraQueryParameters
             *                                Extra query parameters (optional)
             *                                Parameters should be escaped before passing to this method (e.g. using 'encodeURI()')
+            * @param   {String}  claimParam
+            *                                claimParam (optional)
+            *                                Parameters should be used under conditional policy scenarios 
             *
             * @returns {Promise} Promise either fulfilled with AuthenticationResult object or rejected with error
             */
-            acquireTokenAsync(resourceUrl: string, clientId: string, redirectUrl: string, userId?: string, extraQueryParameters?: string): IPromiseAuthenticationResult;
+            acquireTokenAsync(resourceUrl: string, clientId: string, redirectUrl: string, userId?: string, extraQueryParameters?: string, claimParam?:string): IPromiseAuthenticationResult;
 
             /**
              * Acquires token WITHOUT using interactive flow. It checks the cache to return existing result
